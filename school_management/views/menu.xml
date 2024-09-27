@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data>
+    
+    <menuitem
+      id="School_Management"
+      name="SM"
+    />
+
+    <menuitem
+      id="sm_room"
+      name="Class"
+      parent="School_Management"
+      sequence="2"
+      action="room_class_action" />
+
+
+    <menuitem
+      id="sm_config"
+      name="Config"
+      sequence="3"
+      parent="School_Management" />
+
+    <menuitem
+      id="sm_level"
+      name="Level"
+      parent="sm_config"
+      action="level_action" />
+
+    <menuitem
+      id="sm_major"
+      name="Major"
+      parent="sm_config"
+      action="major_action" />
+
+    <menuitem
+      id="sm_build"
+      name="Build"
+      parent="sm_config"
+      action="build_action" />
+
+    <menuitem
+      id="sm_subject"
+      name="Subject"
+      parent="sm_config"
+      action="subject_action" />
+
+    <menuitem
+      id="sm_teacher"
+      name="Teacher"
+      parent="sm_config"
+      action="teacher_action" />
+
+    <menuitem
+      id="sm_student"
+      name="Student"
+      parent="sm_config"
+      action="student_action" />
+
+  </data>
+</odoo>
+

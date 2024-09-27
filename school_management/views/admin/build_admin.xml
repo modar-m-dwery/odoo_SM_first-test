@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="build_action" model="ir.actions.act_window">
+    <field name="name">Build</field>
+    <field name="res_model">school_management.build</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <record id="sm_build_view_tree" model="ir.ui.view">
+    <field name="name">build</field>
+    <field name="model">school_management.build</field>
+    <field name="arch" type="xml">
+      <tree string="Build">
+        <field name="build"></field>
+      </tree>
+    </field>
+  </record>
+
+  <record id="sm_build_view_form" model="ir.ui.view">
+    <field name="name">school_management.build.view.form</field>
+    <field name="model">school_management.build</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="build"></field>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+</odoo>

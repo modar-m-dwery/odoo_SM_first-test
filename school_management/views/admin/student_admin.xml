@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="student_action" model="ir.actions.act_window">
+    <field name="name">student</field>
+    <field name="res_model">school_management.student</field>
+    <field name="view_mode">tree,form</field>
+    <!-- Only accessible by the Administrator -->
+    <field name="groups_id" eval="[(4, ref('group_school_management_admin'))]"/>
+  </record>
+
+  <record id="sm_student_view_tree" model="ir.ui.view">
+    <field name="name">student</field>
+    <field name="model">school_management.student</field>
+    <field name="arch" type="xml">
+      <tree string="student">
+        <field name="student_id"></field>
+        <field name="student_name"></field>
+      </tree>
+    </field>
+    <field name="groups_id" eval="[(4, ref('group_school_management_admin'))]"/>
+  </record>
+
+  <record id="sm_student_view_form" model="ir.ui.view">
+    <field name="name">school_management.student.view.form</field>
+    <field name="model">school_management.student</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <field name="create_date"></field>
+            <field name="student_id"></field>
+            <field name="student_name"></field>
+            <field name="gender"></field>
+            <field name="date_of_birth"></field>
+            <field name="level"></field>
+            <field name="major"></field>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  <field name="groups_id" eval="[(4, ref('group_school_management_admin'))]"/>
+  </record>
+
+
+<!-- Read-Only Student View for Teachers -->
+  <record id="student_readonly_action" model="ir.actions.act_window">
+    <field name="name">Student (Read-Only)</field>
+    <field name="res_model">school_management.student</field>
+    <field name="view_mode">tree,form</field>
+    <!-- Accessible only by Teachers -->
+    <field name="groups_id" eval="[(4, ref('group_school_management_teacher'))]"/>
+  </record>
+
+  <record id="sm_student_readonly_view_tree" model="ir.ui.view">
+    <field name="name">student_readonly</field>
+    <field name="model">school_management.student</field>
+    <field name="arch" type="xml">
+      <tree string="Student">
+        <field name="student_id"></field>
+        <field name="student_name"></field>
+      </tree>
+    </field>
+    <field name="groups_id" eval="[(4, ref('group_school_management_teacher'))]"/>
+  </record>
+
+  <record id="sm_student_readonly_view_form" model="ir.ui.view">
+    <field name="name">school_management.student.view.readonly.form</field>
+    <field name="model">school_management.student</field>
+    <field name="arch" type="xml">
+      <form readonly="1">
+        <sheet>
+          <group>
+            <field name="create_date"></field>
+            <field name="student_id"></field>
+            <field name="student_name"></field>
+            <field name="gender"></field>
+            <field name="date_of_birth"></field>
+            <field name="level"></field>
+            <field name="major"></field>
+          </group>
+        </sheet>
+      </form>
+    </field>
+    <field name="groups_id" eval="[(4, ref('group_school_management_teacher'))]"/>
+  </record>
+</odoo>

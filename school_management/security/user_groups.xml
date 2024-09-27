@@ -1,0 +1,13 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Administrator Group -->
+        <record id="group_school_management_admin" model="res.groups">
+            <field name="name">School Management Administrator</field>
+        </record>
+
+        <!-- Teacher Group -->
+        <record id="group_school_management_teacher" model="res.groups">
+            <field name="name">Teacher</field>
+        </record>
+    </data>
+</odoo>
