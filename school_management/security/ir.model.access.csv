@@ -2,12 +2,9 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_sm_level_admin,access_sm_level_admin,model_school_management_level,base.group_user,1,1,1,1
 access_sm_major_admin,access_sm_major_admin,model_school_management_major,base.group_user,1,1,1,1
 access_sm_build_admin,access_sm_build_admin,model_school_management_build,base.group_user,1,1,1,1
-
 access_sm_subject_admin,access_sm_subject_admin,model_school_management_subject,base.group_user,1,1,1,1
 access_sm_room_class_admin,access_sm_room_class_admin,model_school_management_room_class,base.group_user,1,1,1,1
 access_sm_attendance_admin,access_sm_attendance_admin,model_school_management_attendance,base.group_user,1,1,1,1
-
-
 
 access_school_management_admin,access.school.management.admin,model_school_management_teacher,group_school_management_admin,1,1,1,1
 access_school_management_admin_student,access.school.management.admin.student,model_school_management_student,group_school_management_admin,1,1,1,1
